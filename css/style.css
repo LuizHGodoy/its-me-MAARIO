@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.score {
+  width: 100%;
+  text-align: right;
+  font-family: "Press Start 2P", cursive;
+  font-size: 14px;
+  margin-top: 1rem;
+  padding-right: 2rem;
+}
+
+.clouds {
+  position: absolute;
+  width: 35rem;
+  z-index: 0;
+  /* top: 3rem;
+  left: 4rem; */
+  animation: clouds-animation 20s infinite;
+}
+
+.code {
+  background-color: #8f9fa6;
+  padding: 3px 9px;
+  color: white;
+  border-radius: 4px;
+}
+
+.continue {
+  width: 100%;
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 10px;
+  animation: blink-animation 900ms infinite ease-out;
+}
+
+.game-over {
+  display: none;
+  color: red;
+  font-family: "Press Start 2P", cursive;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 36px;
+}
+
+.game-over-container {
+  position: relative;
+  margin: 2rem auto;
+  margin-top: 7rem;
+}
+
+.game-board {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-image: linear-gradient(#246fa8 0%, #72c5e7 100%);
+  background-size: cover;
+}
+
+.chao {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.8rem;
+}
+
+.pipe {
+  display: none;
+  position: absolute;
+  width: 5rem;
+  animation: pipe-animation 1s infinite linear;
+}
+
+.mario {
+  position: absolute;
+  width: 8rem;
+  z-index: 1;
+}
+
+.mario,
+.pipe {
+  bottom: 2.8rem;
+}
+
+.jump {
+  animation: jump 550ms ease-out;
+}
+
+@keyframes blink-animation {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -5rem;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 2.8rem;
+  }
+  50% {
+    bottom: 14rem;
+  }
+  75% {
+    bottom: 12rem;
+  }
+  100% {
+    bottom: 2.8rem;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -30rem;
+  }
+
+  to {
+    right: 100%;
+  }
+}

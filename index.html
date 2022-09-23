@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="Stylesheet" href="./css/style.css" />
+    <script src="./js/script.js" defer></script>
+
+    <title>Mario Jump</title>
+  </head>
+  <body>
+    <audio
+      id="mainSong"
+      src="./assets/song.mp3"
+      autoplay
+      type="audio/mpeg"
+    ></audio>
+
+    <audio src="./assets/diesong.mp3" type="audio/mpeg" id="dieSong"></audio>
+
+    <div class="game-board">
+      <p class="score" id="score">00</p>
+      <img src="./assets/images/chao.png" alt="chao" class="chao" id="chao" />
+      <img
+        src="./assets/images/mario.gif"
+        alt="mario"
+        class="mario"
+        id="mario"
+      />
+      <img src="./assets/images/pipe.png" alt="pipe" class="pipe" id="pipe" />
+      <img
+        src="./assets/images/awesomeclouds.png"
+        alt="clouds"
+        class="clouds"
+        id="clouds"
+      />
+      <div class="game-over-container">
+        <h1 class="game-over" id="game-over">GAME OVER</h1>
+        <p class="continue" id="continue">
+          press <code class="code">enter</code> to continue
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
